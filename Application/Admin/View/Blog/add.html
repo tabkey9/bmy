@@ -1,0 +1,45 @@
+<!-- 新模块往这里写 -->
+<!-- 博文 情景模块 begin-->
+<!-- markdown-body -->
+  <!-- 面包屑导航 -->
+  <ol class="breadcrumb glyphicon glyphicon-folder-open">
+    <li><a href="{:U('Admin/Index/index')}">Admin</a></li>
+    <li><a href="{:U('Admin/Blog/index')}">Blog</a></li>
+    <li class="active">add</li>
+  </ol>
+        <div class="header">
+            <h1 class="page-title">MarkDown模式 - add</h1>
+        </div>
+
+        <!-- add form -->
+        <form action="" method="post" id="tab" enctype="multipart/form-data">
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active"><a href="#basic" data-toggle="tab">基本信息</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="basic">
+                    <div class="well">
+                        <label>标题：</label>
+                        <input type="text" name="title" value="" class="input-xlarge"></input>&emsp;
+                        <label>分类： </label>
+                        <select name="cate_id">
+                            <volist name="data" id="v">
+                            <option value="{$v.id}">{$v.cate_name}</option>
+                            </volist>
+                        </select>&emsp;
+                        <button class="btn btn-primary" type="submit">提交</button>
+                    </div><!-- end well -->
+
+                    <div class="tab-pane fade in" id="desc">
+                        <div class="well">
+                            <label>内容：</label>
+                            <textarea style="width: 95%;height: 300px;" name="content" class="input-xlarge"></textarea>
+                       </div><!-- end well -->
+                    </div> 
+                </div>
+                <input type="hidden" name="md" value="1"></input>
+                <input type="hidden" name="user_id" value="{$Think.session.manager_info.id}"></input>
+            </div>
+        </form><!-- add form end -->
+
+</div><!--/.col-xs-12.col-sm-9-->
