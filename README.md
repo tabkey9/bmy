@@ -61,11 +61,15 @@ return array(
 
 ## 已知问题汇总：
 问：为什么我 git clone 之后访问出现链接已重置的提示？怎么办？
+
 答：我也尝试了一下，确实如此。
+
 解决方案：你根据实际情况完善一下数据库配置文件“\Application\Common\Conf\config.php”，然后删除TP框架自动生成的Runtime目录，你再访问首页试试。我这边验证过了，可行的。
 
 问：我也想参与开发，为什么不能合并分支？
+
 答：感谢你的贡献，但是请你在本地执行这个指令忽略掉数据库配置文件，再请求合并主分支。
+
 ```
 git update-index --assume-unchanged Application/Common/Conf/config.php
 ```
