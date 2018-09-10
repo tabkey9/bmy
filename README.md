@@ -21,8 +21,10 @@
 ```php
 # 历史源码：直接从 GitHub 上克隆即可获得；
 
-# Git install
+# Git install 
 git clone https://github.com/tabkey9/bmy.git
+# Or
+git clone git@github.com:tabkey9/bmy.git
 
 # SVN install
 svn export svn://不愿暴露IP/ --username 不愿暴露用户名 --password 不愿暴露密码 --no-auth-cache  --force
